@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "projects"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "GaleryImages": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Categories": {
+      "type": "enumeration",
+      "enum": [
+        "Web",
+        "Mobile",
+        "Design ",
+        "Brand"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
+    }
+  }
+}
